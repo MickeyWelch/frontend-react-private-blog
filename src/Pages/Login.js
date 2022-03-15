@@ -1,4 +1,4 @@
-import React  from 'react';
+import React from 'react';
 import {useHistory} from "react-router-dom";
 import {useForm} from "react-hook-form";
 import users from '../data/users.json';
@@ -7,19 +7,17 @@ function Login({isAuth, toggleAuth}) {
     const history = useHistory();
 
     // Hookform
-    const {register, formState: { errors }, handleSubmit} = useForm();
+    const {register, formState: {errors}, handleSubmit} = useForm();
+    console.log(users[4].name);
 
-    const validateName = users.find((user) => {
-        return user.name === users.name;
-    })
-    const validatePassword = users.find((user) => {
-        return user.password === users.password;
-    })
+    function onFormSubmit(name, password) {
+        console.log(name, password);
 
-    function onFormSubmit(validateName, validatePassword){
-        // console.log(validateName, validatePassword);
-        toggleAuth(true);
-        history.push('blog');
+        if (name === users.name) {
+            toggleAuth(true);
+            history.push('blog');
+        }
+        console.log('niet gevonden')
     }
 
     return (
@@ -44,7 +42,7 @@ function Login({isAuth, toggleAuth}) {
                     name="password"
                     id="password"
                     placeholder="Password *"
-                    {...register("password",{
+                    {...register("password", {
                         required: "Password mag niet leeg zijn",
                     })}
                 />
@@ -52,7 +50,8 @@ function Login({isAuth, toggleAuth}) {
 
                 <button
                     type="submit"
-                >Inloggen</button>
+                >Inloggen
+                </button>
             </form>
 
         </div>
