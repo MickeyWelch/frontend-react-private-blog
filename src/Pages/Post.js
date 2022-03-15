@@ -10,11 +10,11 @@ function Post() {
     })
 
     return (
-        <>
+        <div className="content">
             <h1>{getPost.title}</h1>
             <em>{getPost.date}</em>
             <p>{getPost.content}</p>
-        </>
+        </div>
     );
 }
 
