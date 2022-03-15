@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
 import {Route, Switch} from "react-router-dom";
-import {useForm} from 'react-hook-form';
 
 import Menu from "./Components/Menu";
 import Home from "./Pages/Home";
