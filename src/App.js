@@ -7,7 +7,7 @@ import Blog from "./Pages/Blog";
 import Login from "./Pages/Login";
 import Post from "./Pages/Post";
 
-
+// 1
 // npm install react-router-dom@5.2.0 > npm start, set BrouwserRouter in index.js
 // maak pages en componenten map
 // maak pages en comps met basis inhoud
@@ -17,13 +17,15 @@ import Post from "./Pages/Post";
 // blogpagina: import json, p tag met .length, map voor titles, zet in ul, maak Links
 // postpagina: import json, imprt useParams, find maken, toevoegen title, date, content
 
+// 2
+// voeg props toe aan Loginpage
+
 function App() {
   // We houden in de state bij of iemand is "ingelogd" (simpele versie)
   const [isAuthenticated, toggleIsAuthenticated ] = useState(false);
 
   return (
     <div>
-      Maak hier jouw prachtige blog-applicatie!
         <Menu />
         <Switch>
             <Route exact path="/">
@@ -33,7 +35,10 @@ function App() {
                 <Blog />
             </Route>
             <Route exact path="/login">
-                <Login />
+                <Login
+                    isAuth={isAuthenticated}
+                    toggleAuth={toggleIsAuthenticated}
+                />
             </Route>
             <Route exact path="/blog/:blogId">
                 <Post />

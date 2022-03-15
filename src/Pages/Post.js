@@ -3,18 +3,17 @@ import posts from '../data/posts.json';
 import {useParams} from "react-router-dom";
 
 function Post() {
-    console.log(posts);
     const {blogId} = useParams();
 
     const getPost = posts.find((post) => {
-        return post.id === blogId.id;
+        return post.id === blogId;
     })
 
     return (
         <>
-            <h1>{posts.length}</h1>
-            <p>dit is de id {blogId}</p>
-            <p>{getPost}</p>
+            <h1>{getPost.title}</h1>
+            <em>{getPost.date}</em>
+            <p>{getPost.content}</p>
         </>
     );
 }
