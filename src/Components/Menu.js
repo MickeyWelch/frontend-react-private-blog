@@ -8,6 +8,7 @@ function Menu({isAuth, toggleAuth}) {
     function logoutFromBlog() {
         history.push('blog')
         toggleAuth(false);
+        console.log(isAuth)
     }
 
     return (

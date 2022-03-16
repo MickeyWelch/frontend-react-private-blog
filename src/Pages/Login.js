@@ -8,16 +8,12 @@ function Login({isAuth, toggleAuth}) {
 
     // Hookform
     const {register, formState: {errors}, handleSubmit} = useForm();
-    console.log(users[4].name);
+    console.log(users);
 
-    function onFormSubmit(name, password) {
-        console.log(name, password);
-
-        if (name === users.name) {
-            toggleAuth(true);
-            history.push('blog');
-        }
-        console.log('niet gevonden')
+    function onFormSubmit() {
+        toggleAuth(true);
+        history.push('blog');
+        console.log(isAuth)
     }
 
     return (
