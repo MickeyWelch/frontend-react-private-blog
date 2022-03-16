@@ -1,0 +1,27 @@
+[
+  {
+    "id": "1",
+    "name": "Jan Jansen",
+    "password": "dansen&Jansen"
+  },
+  {
+    "id": "2",
+    "name": "Juf Nova",
+    "password": "Love4Bananas"
+  },
+  {
+    "id": "3",
+    "name": "Meester Sam",
+    "password": "knowsS&%$"
+  },
+  {
+    "id": "4",
+    "name": "Ikzelf Doemee",
+    "password": "oefenen/R3act"
+  },
+  {
+    "id": "5",
+    "name": "test",
+    "password": "testen"
+  }
+]
